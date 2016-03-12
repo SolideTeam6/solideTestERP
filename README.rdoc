@@ -6,10 +6,25 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
+    ruby 2.2.1
+    rails 4.2.5
+    gem 2.6.1
 * System dependencies
+    gem update
+    gem intall rubygems-update
+    update_rubygems
+    gem update --system
+    bundle update
+    gem install uglifier
+    sudo app-get install nodejs
+
+    bundle install
+
+    rake assets:precompile
+
 
 * Configuration
+    rake db:migrate
 
 * Database creation
 
