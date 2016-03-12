@@ -11,5 +11,25 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require css/bootstrap.css
+ *= require css/AdminLTE.css
+ *= require css/AdminLTE.min.css
+ *= require css/skins/_all-skins.min.css
+ *= require css/morris.css
+ *= require css/datepicker3.css
+ *= require css/bootstrap3-wysihtml5.min.css
+ *= require css/jquery-jvectormap-1.2.2.css
+ *= require css/fullcalendar.css
+  *= require css/daterangepicker-bs3.css
  *= require_self
  */
+
+
+ @font-face {
+   font-family: 'Glyphicons Halflings';
+   src: url('../assets/glyphicons-halflings-regular.eot');
+   src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+   url('../assets/glyphicons-halflings-regular.woff') format('woff'),
+   url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
+   url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+ }
