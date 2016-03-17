@@ -1,0 +1,31 @@
+<% content_for :path do%>
+    <section class="content-header">
+      <h1>Dashboard - {Landing Index}
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i><%= link_to 'Home',root_path %></li>
+        <li class="active">Empresas</li>
+      </ol>
+    </section>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @company.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @company.image.thumb.url %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

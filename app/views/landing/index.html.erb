@@ -1,19 +1,31 @@
-<section class="content">
-  <!-- Small boxes (Stat box) -->
-  <div class="row">
-    <div class="col-lg-3 col-xs-6">
-      <!-- small box -->
-      <div class="small-box bg-aqua">
-        <div class="inner">
-          <h3>150</h3>
+<% content_for :path do%>
+    <section class="content-header">
+      <h1>Dashboard - {Landing Index}
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i><%= link_to 'Home',root_path %></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+<% end %>
 
-          <p>New Orders</p>
-        </div>
-        <div class="icon">
-          <i class="ion ion-bag"></i>
-        </div>
-        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+<div class="row">
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-green">
+      <div class="inner">
+        <h3>0</h3>
+        <p>Empresas</p>
       </div>
+      <div class="icon">
+        <i class="ion ion-bag"></i>
+      </div>
+      <span class="small-box-footer">
+          <%= link_to companies_path,{:controller => 'Company',:action => 'index'} do %>
+              More info <i class="fa fa-arrow-circle-right"></i>
+          <% end %>
+      </span>
     </div>
-    </div>
-</section>
+  </div>
+</div>

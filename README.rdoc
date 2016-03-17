@@ -17,10 +17,10 @@ Things you may want to cover:
     bundle update
     gem install uglifier
     sudo app-get install nodejs
-
     bundle install
-
     rake assets:precompile
+    bundle install
+    sudo apt-get install imagemagick
 
 
 * Configuration
