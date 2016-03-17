@@ -5,6 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
+DESPUES DE HACER EL CLONE DEL PROYECTO CONFIGURAR :
+    git config --global user.name "YOUR NAME"
+    git config --global user.email "YOUR EMAIL ADDRESS"
+*****PARA QUE TODO PUSH VAYA NOMBRADO CON QUIEN HIZO LA CONTRIBUCION
+
+
 * Ruby version
     ruby 2.2.1
     rails 4.2.5
