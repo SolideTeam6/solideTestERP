@@ -1,7 +1,7 @@
 <% content_for :path do%>
     <section class="content-header">
-      <h1>Dashboard - {Landing Index}
-        <small>Control panel</small>
+      <h1>Dashboard
+        <small>Panel de Control</small>
       </h1>
       <ol class="breadcrumb">
         <li><i class="fa fa-dashboard"></i><%= link_to 'Home',root_path %></li>
@@ -15,15 +15,19 @@
     <!-- small box -->
     <div class="small-box bg-green">
       <div class="inner">
-        <h3>0</h3>
-        <p>Empresas</p>
+        <h3><%= @companies.size%></h3>
+        <% if @companies.size > 1 %>
+            <p>Empresas</p>
+        <% else %>
+            <p>Empresa</p>
+        <% end %>
       </div>
       <div class="icon">
-        <i class="ion ion-bag"></i>
+        <i class="ion ion-podium"></i>
       </div>
       <span class="small-box-footer">
           <%= link_to companies_path,{:controller => 'Company',:action => 'index'} do %>
-              More info <i class="fa fa-arrow-circle-right"></i>
+              Mostrar <i class="fa fa-arrow-circle-right"></i>
           <% end %>
       </span>
     </div>

@@ -1,31 +1,55 @@
+<% content_for :path do%>
+    <section class="content-header">
+      <h1>Empresas
+        <small></small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i><%= link_to 'Home',root_path %></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+<% end %>
+
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Companies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.description %></td>
-        <td><%= company.image %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Company', new_company_path %>
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title"><%= link_to 'Agregar', new_company_path %></h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th colspan="3">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @i= 1%>
+                <% @companies.each do |company| %>
+                <tr>
+                    <td><%= @i %></td>
+                    <td><%= company.name %></td>
+                    <td><%= company.description %></td>
+                    <td><%= link_to 'Show', company %></td>
+                    <td><%= link_to 'Edit', edit_company_path(company) %></td>
+                    <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <% @i=+1 %>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix">
+            <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+    </div>
+</div>

@@ -1,35 +1,61 @@
+<% content_for :path do%>
+    <section class="content-header">
+      <h1>Modificar <%= @company.name %>
+        <small></small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i><%= link_to 'Home',root_path %></li>
+        <li class="active">
+            <%= link_to companies_path,{:controller => 'Company',:action => 'index'} do %>
+                Empresas
+            <% end %>
+        </li>
+      </ol>
+    </section>
+<% end %>
 <%= form_for @company, html: { multipart: true } do |f| %>
-  <% if @company.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
-
-      <ul>
-      <% @company.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-    <% if f.object.image? %>
-      <%= image_tag f.object.image.thumb.url %>
-      <%= f.label :remove_image %>
-      <%= f.check_box :remove_image %>
+    <% if @company.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
+            <ul>
+                <% @company.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                    <% end %>
+            </ul>
+        </div>
     <% end %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">Editar Empresa:</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre:</label>
+                  <%= f.text_field :name,class:"form-control",id:"exampleInput",placeholder:"Nombre De la Empresa" %>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Descripcion:</label>
+                  <%= f.text_field :description,class:"form-control",id:"exampleInput",placeholder:"Descripcion Breve" %>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Logo Empresarial:</label>
+                      <%= f.file_field :image %>
+                      <% if f.object.image? %>
+                        <%= image_tag f.object.image.thumb.url %>
+                        <%= f.label :remove_image %>
+                        <%= f.check_box :remove_image ,type:"checkbox"%>
+                      <% end %>
+                  <p class="help-block">Imagen debe ser menor a 500Mb.</p>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <%= f.submit 'Actualizar',class:"btn btn-primary"%>
+              </div>
+            </form>
+    </div>
 <% end %>
