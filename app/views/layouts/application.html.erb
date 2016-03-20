@@ -261,6 +261,11 @@
                     <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
+                    <div class="pull-left">
+                        <button type="button" class="btn btn-default btn-flat" data-toggle="modal" data-target="#myModal">
+                          Empresa
+                        </button>
+                    </div>
                     <div class="pull-right">
                       <a href="#" class="btn btn-default btn-flat">Sign out</a>
                     </div>
@@ -275,6 +280,24 @@
           </div>
         </nav>
       </header>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Seleccionar Empresa:</h4>
+            </div>
+            <div class="modal-body">
+              Empresa:
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Elegir.</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
