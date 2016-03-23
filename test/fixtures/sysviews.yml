@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key_views: 1
+  description: MyText
+  url: MyString
+  status: MyString
+
+two:
+  key_views: 1
+  description: MyText
+  url: MyString
+  status: MyString
