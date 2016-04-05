@@ -1,0 +1,2 @@
+class SubmodulesController < ApplicationController
+end

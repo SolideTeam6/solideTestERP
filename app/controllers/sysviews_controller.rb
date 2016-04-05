@@ -1,0 +1,2 @@
+class SysviewsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class SysmodulesController < ApplicationController
+end
